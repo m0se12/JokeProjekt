@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Joke</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.1/css/bootstrap-select.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+<h1>Joke Service</h1>
+<ul class="nav nav-tabs">
+    <li class="active"><a data-toggle="tab" href="#menuComp">Egne Jokes</a></li>
+    <li><a data-toggle="tab" href="#menuEmp">Andres jokes</a></li>
+</ul>
+
+<div class="tab-content">
+    <div id="menuComp" class="tab-pane fade in active">
+        <div class="row">
+            <div class="col-sm-6">
+                <h3>Companies</h3>
+                <ol id="companies"></ol>
+            </div>
+            <div class="col-sm-6">
+                <div class="well">
+                    <h3>Tilføj Joke</h3>
+                    <label>Name</label>
+                    <input class="form-control" type="text" name="name" id="compName">
+                    <label>Hours</label><br>
+                    <input class="form-control" type="text" name="hours" id="compHours"><br/>
+                    <button type="button" class="btn btn-default" id="submitCompany">Create</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="menuEmp" class="tab-pane fade">
+        <div class="row">
+            <div class="col-sm-6">
+                <h3>Employees</h3>
+                <ol id="employees"></ol>
+            </div>
+            <div class="col-sm-6">
+                <div class="well">
+                    <h3>Add employee</h3>
+                    <label>Name</label><br>
+                    <input class="form-control" type="text" name="name" id="empName">
+                    <label>Title</label><br>
+                    <input class="form-control" type="text" name="title" id="empTitle">
+                    <label>Wage</label><br>
+                    <input class="form-control" type="text" name="wage" id="empWage">
+
+                    <label>Company</label><br>
+                    <select class="selectpicker" id="createPicker"/>
+                    </select><br/><br/>
+
+                    <button type="button" class="btn btn-default" id="submitEmployee">Create</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+</body>
+</html>
