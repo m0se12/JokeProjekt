@@ -5,6 +5,7 @@ var joke = new Schema({
     setup: setup,
     punchline: punchline
 });
+
 // noinspection JSAnnotator
 joke.methods.toString() = function () {
     return this.setup + ", punchline: " + this.punchline
