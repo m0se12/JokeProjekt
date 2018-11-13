@@ -51,7 +51,7 @@ app.post('/api/jokes', async (request, response) => {
 app.patch('/api/jokes', async (request, response) => {
     const { id, setup, punchline } = request.body
 
-    await JokeSchema.updateOne({ _id: id }, { setup, punchline }).exec()
+    await JokeSchema.updateOne({ _id: id }, { setup, punchline }).exec();
 
     response.status(200).send('Joke updated')
 })
