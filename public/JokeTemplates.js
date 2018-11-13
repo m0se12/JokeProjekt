@@ -1,24 +1,23 @@
+import * as Handlebars from "mongoose";
+
 export default class JokeTemplates {
-    constructor () {
-        this.loader = '<div class="emoji-container"><div class="emoji"><div>😂</div></div>'
-    }
 
     async compileContent () {
-        const template = await fetch('/templates/content.hbs').then(response => response.text())
+        const template = await fetch('./templates/content.hbs').then(response => response.text())
         const compiler = Handlebars.compile(template)
 
         return compiler({ })
     }
 
     async compileJokes (jokes) {
-        const template = await fetch('/templates/jokes.hbs').then(response => response.text())
+        const template = await fetch('./templates/jokes.hbs').then(response => response.text())
         const compiler = Handlebars.compile(template)
 
         return compiler({ jokes })
     }
 
     async compileServices (services) {
-        const template = await fetch('/templates/services.hbs').then(response => response.text())
+        const template = await fetch('./templates/services.hbs').then(response => response.text())
         const compiler = Handlebars.compile(template)
 
         return compiler({ services })

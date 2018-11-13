@@ -43,11 +43,5 @@ module.exports = class jokeRegistry {
         })
     }
 
-    async deleteService (service) {
-        await fetch(this.url, {
-            method: 'DELETE',
-            body: JSON.stringify(service),
-            headers: { 'Content-Type': 'application/json' }
-        })
-    }
+
 }

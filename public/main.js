@@ -1,5 +1,6 @@
-import JokeService from './JokeService.js'
-import JokeTemplates from './JokeTemplates.js'
+import JokeService from '/JokeService.js'
+import JokeTemplates from '/JokeTemplates.js'
+
 
 const service = new JokeService()
 const templates = new JokeTemplates()

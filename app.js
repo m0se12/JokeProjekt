@@ -4,8 +4,10 @@ const fetch  = require('node-fetch');
 const JokeRegistry = require('./JokeRegistry');
 const JokeSchema = require('./models/Joke')
 
+
 mongoose.Promise = Promise
 mongoose.connect('mongodb://mose:kode123@ds037778.mlab.com:37778/jokes_mm', {useNewUrlParser : true});
+
 
 const app = express();
 const jokeRegistry = new JokeRegistry();
@@ -18,9 +20,10 @@ app.get('/api/jokes', async (request, response) => {
     response.json(await JokeSchema.find().exec())
 })
 
-app.get('/api/othersites', async (request, require) =>{
-    respone.json(await JokeRegistry.getServices())
-    })
+app.get('/api/jokes', async (request, response) => {
+    response.json(await JokeSchema.find().exec())
+})
+
 
 app.get('/api/otherjokes/:serviceName', async (request, response) => {
     const serviceName = request.params.serviceName
@@ -50,13 +53,12 @@ app.post('/api/jokes', async (request, response) => {
 
 app.patch('/api/jokes', async (request, response) => {
     const { id, setup, punchline } = request.body
-
     await JokeSchema.updateOne({ _id: id }, { setup, punchline }).exec();
 
     response.status(200).send('Joke updated')
 })
 
-console.log('Registering joke service...')
+console.log('Registering joke service')
 jokeRegistry.addService({
     name: 'm&mJokes',
     address: 'https://mogmjokes.herokuapp.com/',
