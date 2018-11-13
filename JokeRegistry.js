@@ -1,6 +1,6 @@
 const fetch = require('node-fetch')
 
-module.exports = class jokeApp {
+module.exports = class jokeRegistry {
     constructor () {
         this.url = 'https://krdo-joke-registry.herokuapp.com/api/services'
     }
@@ -27,7 +27,7 @@ module.exports = class jokeApp {
             .filter(element => element.response)
             .filter(element => element.response.status === 200)
             .map(element => element.service)
-            .filter(service => service.name !== 'J😂kenator 4000')
+            .filter(service => service.name !== 'm&mJokes')
     }
 
     async addService (service) {

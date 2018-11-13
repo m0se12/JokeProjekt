@@ -8,7 +8,7 @@ var joke = new Schema({
 
 // noinspection JSAnnotator
 joke.methods.toString() = function () {
-    return this.setup + ", punchline: " + this.punchline
+    return ", setup: " + this.setup + ", punchline: " + this.punchline
 };
 
 module.exports = mongoose.model('Joke', joke);
