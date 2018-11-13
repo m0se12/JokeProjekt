@@ -20,7 +20,7 @@ module.exports = class jokeRegistry {
             if (!address.endsWith('/')) {
                 service.address = address + '/'
 
-                address += '/api/jokes'
+                address += 'api/jokes'
             } else {
                 address += 'api/jokes'
             }
