@@ -1,21 +1,20 @@
-import JokeService from '/JokeService.js'
-import JokeTemplates from '/JokeTemplates.js'
-
+import JokeService from './JokeService.js'
+import JokeTemplates from './JokeTemplates.js'
 
 const service = new JokeService()
 const templates = new JokeTemplates()
 
-const selfServiceName = 'M&MJokes'
+const selfServiceName = 'm&mJokes'
 let activeService = selfServiceName
 
-const displayLoader = () => document.getElementById('jokes').innerHTML = templates.loader
+const displayLoader = () => document.getElementById('jokes').innerHTML = templates.loader;
 
 const updateContent = async () => {
-    document.getElementById('content').innerHTML = await templates.compileContent()
-    document.querySelector(`[data-service-name="${activeService}"]`).classList.add('active')
+    document.getElementById('content').innerHTML = await templates.compileContent();
+    document.querySelector(`[data-service-name="${activeService}"]`).classList.add('active');
 
     if (activeService !== selfServiceName) {
-        document.querySelectorAll('.joke-actions').forEach(element => element.classList.add('hidden'))
+        document.querySelectorAll('.joke-actions').forEach(element => element.classList.add('hidden'));
     }
 }
 

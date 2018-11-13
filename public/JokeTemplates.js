@@ -1,5 +1,3 @@
-import * as Handlebars from "mongoose";
-
 export default class JokeTemplates {
 
     async compileContent () {
