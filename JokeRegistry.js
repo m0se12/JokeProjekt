@@ -1,4 +1,5 @@
 const fetch = require('node-fetch')
+const urlMatcher = /^(?:\w+:)?\/\/([^\s\.]+\.\S{2}|localhost[\:?\d]*)\S*$/
 
 module.exports = class jokeRegistry {
     constructor () {
@@ -11,6 +12,10 @@ module.exports = class jokeRegistry {
 
         for (const service of services) {
             let address = service.address
+
+            if (!urlMatcher.test(address)){
+                continue
+            }
 
             if (!address.endsWith('/')) {
                 service.address = address + '/'

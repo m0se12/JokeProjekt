@@ -19,12 +19,12 @@ app.get('/api/jokes', async (request, response) => {
 })
 
 app.get('/api/othersites', async ( request,require) =>{
-    respone.json(await jokeRegistry.getServices())
+    respone.json(await JokeRegistry.getServices())
     })
 
 app.get('/api/otherjokes/:serviceName', async (request, response) => {
     const serviceName = request.params.serviceName
-    const services = await jokeRegistry.getServices()
+    const services = await JokeRegistry.getServices()
     const service = services.find(service => service.name === serviceName)
 
     let jokes
