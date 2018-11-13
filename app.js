@@ -5,7 +5,7 @@ const JokeRegistry = require('./JokeRegistry');
 const JokeSchema = require('./models/Joke')
 
 mongoose.Promise = Promise
-mongoose.connect('mongodb://<mose>:<Kode123>@ds037778.mlab.com:37778/jokes_mm', {useNewUrlParser: true});
+mongoose.connect('mongodb://<mose>:<Kode123>@ds037778.mlab.com:37778/jokes_mm', {useNewUrlParser : true});
 
 const app = express();
 const jokeRegistry = new JokeRegistry();

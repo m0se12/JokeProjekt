@@ -1,4 +1,4 @@
-var mongoose = require('mongoose');
+/*var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 var joke = new Schema({
@@ -12,3 +12,12 @@ joke.methods.toString() = function () {
 };
 
 module.exports = mongoose.model('Joke', joke);
+
+*/
+
+const mongoose = require('mongoose')
+
+module.exports = mongoose.model('Joke', new mongoose.Schema({
+    setup: { type: String, required: true },
+    punchline: { type: String, required: true }
+}))
