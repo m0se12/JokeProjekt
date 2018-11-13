@@ -5,20 +5,20 @@ const JokeRegistry = require('./JokeRegistry');
 const JokeSchema = require('./models/Joke')
 
 mongoose.Promise = Promise
-mongoose.connect('mongodb://<mose>:<Kode123>@ds037778.mlab.com:37778/jokes_mm', {useNewUrlParser : true});
+mongoose.connect('mongodb://mose:kode123@ds037778.mlab.com:37778/jokes_mm', {useNewUrlParser : true});
 
 const app = express();
 const jokeRegistry = new JokeRegistry();
 
 
 app.use(express.json());
-app.use(express.static('static'));
+app.use(express.static('public'));
 
 app.get('/api/jokes', async (request, response) => {
     response.json(await JokeSchema.find().exec())
 })
 
-app.get('/api/othersites', async ( request,require) =>{
+app.get('/api/othersites', async (request, require) =>{
     respone.json(await JokeRegistry.getServices())
     })
 
@@ -59,7 +59,7 @@ app.patch('/api/jokes', async (request, response) => {
 console.log('Registering joke service...')
 jokeRegistry.addService({
     name: 'm&mJokes',
-    address: 'https://mogmjokes.herokuapp.com//',
+    address: 'https://mogmjokes.herokuapp.com/',
     secret: '420'
 }).then(() => console.log('Joke service registered'))
 
@@ -67,3 +67,4 @@ const port = process.env.PORT || 8080
 console.log('Listening on port ' + port)
 
 app.listen(port)
+
