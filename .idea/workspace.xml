@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8c60c644-b76f-4416-9710-8cc9b903478d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/jokes.txt" beforeDir="false" afterPath="$PROJECT_DIR$/jokes.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/main.js" afterDir="false" />
+    <list default="true" id="8c60c644-b76f-4416-9710-8cc9b903478d" name="Default Changelist" comment="Rettelser">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -28,7 +28,7 @@
           <entry key="gitignore" value="2" />
           <entry key="hbs" value="13" />
           <entry key="html" value="7" />
-          <entry key="js" value="59" />
+          <entry key="js" value="61" />
           <entry key="json" value="4" />
           <entry key="txt" value="1" />
         </counts>
@@ -39,7 +39,7 @@
           <entry key="HTML" value="7" />
           <entry key="Handlebars/Mustache" value="13" />
           <entry key="JSON" value="2" />
-          <entry key="JavaScript" value="59" />
+          <entry key="JavaScript" value="61" />
           <entry key="PLAIN_TEXT" value="3" />
           <entry key="tsconfig" value="2" />
         </counts>
@@ -49,7 +49,7 @@
           <entry key="gitignore" value="12" />
           <entry key="hbs" value="22" />
           <entry key="html" value="9" />
-          <entry key="js" value="3268" />
+          <entry key="js" value="3286" />
           <entry key="json" value="9" />
           <entry key="txt" value="96" />
         </counts>
@@ -59,7 +59,7 @@
           <entry key="HTML" value="9" />
           <entry key="Handlebars/Mustache" value="22" />
           <entry key="JSON" value="9" />
-          <entry key="JavaScript" value="3268" />
+          <entry key="JavaScript" value="3286" />
           <entry key="PLAIN_TEXT" value="108" />
         </counts>
       </usages-collector>
@@ -72,20 +72,39 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="24" column="2" lean-forward="true" selection-start-line="24" selection-start-column="2" selection-end-line="24" selection-end-column="2" />
+            <state relative-caret-position="153">
+              <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/JokeService.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="68">
               <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/JokeTemplates.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-360" />
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/models/Joke.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="258">
+              <caret line="20" column="17" lean-forward="true" selection-start-line="20" selection-start-column="17" selection-end-line="20" selection-end-column="17" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -179,11 +198,11 @@
         <option value="$PROJECT_DIR$/main.js" />
         <option value="$PROJECT_DIR$/Procfile.js" />
         <option value="$PROJECT_DIR$/public/jokeservice.css" />
-        <option value="$PROJECT_DIR$/public/JokeTemplates.js" />
-        <option value="$PROJECT_DIR$/app.js" />
         <option value="$PROJECT_DIR$/jokes.txt" />
         <option value="$PROJECT_DIR$/JokeRegistry.js" />
         <option value="$PROJECT_DIR$/public/main.js" />
+        <option value="$PROJECT_DIR$/public/JokeTemplates.js" />
+        <option value="$PROJECT_DIR$/app.js" />
       </list>
     </option>
   </component>
@@ -223,11 +242,6 @@
               <item name="JokeProjekt" type="b2602c69:ProjectViewProjectNode" />
               <item name="JokeProjekt" type="462c0819:PsiDirectoryNode" />
               <item name="public" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="JokeProjekt" type="b2602c69:ProjectViewProjectNode" />
-              <item name="JokeProjekt" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -279,8 +293,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Node.js.main.js" />
         <item itemvalue="Node.js.app.js" />
+        <item itemvalue="Node.js.main.js" />
         <item itemvalue="Node.js.App.js" />
       </list>
     </recent_temporary>
@@ -295,7 +309,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1541580819619</updated>
-      <workItem from="1541580822472" duration="40745000" />
+      <workItem from="1541580822472" duration="41377000" />
     </task>
     <task id="LOCAL-00001" summary="node js">
       <created>1541584167311</created>
@@ -371,14 +385,14 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40745000" />
+    <option name="totallyTimeSpent" value="41377000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="0" width="765" height="969" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Favorites" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4982079" visible="true" weight="0.29395604" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4982079" visible="true" weight="0.29395604" />
       <window_info id="Structure" order="1" sideWeight="0.50179213" side_tool="true" weight="0.22252747" />
       <window_info anchor="bottom" id="TypeScript" />
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
@@ -388,7 +402,7 @@
       <window_info anchor="bottom" id="Messages" sideWeight="0.49862638" weight="0.32894737" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32894737" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49932525" visible="true" weight="0.4617225" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49932525" visible="true" weight="0.4617225" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -536,16 +550,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/models/Joke.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="257">
-          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="21" selection-end-column="47" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -581,13 +585,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/JokeTemplates.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="680">
-          <caret line="40" lean-forward="true" selection-start-line="40" selection-end-line="40" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/jokes.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -599,13 +596,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="16" lean-forward="true" selection-start-column="16" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" column="2" lean-forward="true" selection-start-line="24" selection-start-column="2" selection-end-line="24" selection-end-column="2" />
         </state>
       </provider>
     </entry>
@@ -630,6 +620,28 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/JokeTemplates.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-360" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/Joke.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="258">
+          <caret line="20" column="17" lean-forward="true" selection-start-line="20" selection-start-column="17" selection-end-line="20" selection-end-column="17" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
         </state>
       </provider>
     </entry>

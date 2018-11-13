@@ -16,9 +16,7 @@ const jokeRegistry = new JokeRegistry();
 app.use(express.json());
 app.use(express.static('public'));
 
-app.get('/api/jokes', async (request, response) => {
-    response.json(await JokeSchema.find().exec())
-})
+
 
 app.get('/api/jokes', async (request, response) => {
     response.json(await JokeSchema.find().exec())
