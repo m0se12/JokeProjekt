@@ -25,7 +25,7 @@ app.get('/api/othersites', async (request, response) => {
 })
 
 
-app.get('/api/otherjokes/:serviceName', async (request, response) => {
+app.get('/api/otherjokes/:serviceName', async (r    equest, response) => {
     const serviceName = request.params.serviceName;
     const services = await JokeRegistry.getServices();
     const service = services.find(service => service.name === serviceName);
