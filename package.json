@@ -1,0 +1,10 @@
+{
+  "name": "JokeProjekt",
+  "version": "1.0.0",
+  "main":"app.js",
+  "dependencies": {
+    "express": "^4.16.4",
+    "mongoose": "^5.3.12",
+    "node-fetch": "^2.3.0"
+  }
+}
