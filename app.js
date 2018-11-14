@@ -17,18 +17,18 @@ app.use(express.json());
 app.use(express.static('public'));
 
 app.get('/api/jokes', async (request, response) => {
-    response.json(await JokeSchema.find().exec())
+    response.json(await JokeSchema.find().exec());
 })
 
 app.get('/api/othersites', async (request, response) => {
-    response.json(await jokeRegistry.getServices())
+    response.json(await jokeRegistry.getServices());
 })
 
 
 app.get('/api/otherjokes/:serviceName', async (request, response) => {
-    const serviceName = request.params.serviceName
-    const services = await JokeRegistry.getServices()
-    const service = services.find(service => service.name === serviceName)
+    const serviceName = request.params.serviceName;
+    const services = await JokeRegistry.getServices();
+    const service = services.find(service => service.name === serviceName);
 
     let jokes
 
@@ -43,30 +43,30 @@ app.get('/api/otherjokes/:serviceName', async (request, response) => {
 
 
 app.post('/api/jokes', async (request, response) => {
-    const setup = request.body.setup
-    const punchline = request.body.punchline
+    const setup = request.body.setup;
+    const punchline = request.body.punchline;
 
-    new JokeSchema({ setup, punchline }).save()
+    new JokeSchema({ setup, punchline }).save();
 
-    response.status(200).send('Joke added')
+    response.status(200).send('Joke added');
 })
 
 app.patch('/api/jokes', async (request, response) => {
-    const { id, setup, punchline } = request.body
+    const { id, setup, punchline } = request.body;
     await JokeSchema.updateOne({ _id: id }, { setup, punchline }).exec();
 
-    response.status(200).send('Joke updated')
+    response.status(200).send('Joke updated');
 })
 
-console.log('Registering joke service')
+console.log('Registering joke service');
 jokeRegistry.addService({
     name: 'm&mJokes',
     address: 'https://mogmjokes.herokuapp.com/',
     secret: '420'
-}).then(() => console.log('Joke service registered'))
+}).then(() => console.log('Joke service registered'));
 
 const port = process.env.PORT || 8080
 console.log('Listening on port ' + port)
 
-app.listen(port)
+app.listen(port);
 

@@ -18,6 +18,22 @@ const updateContent = async () => {
     }
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 const listenForClicks = (filter, click) => {
     document.addEventListener('click', event => {
         const target = event.target
