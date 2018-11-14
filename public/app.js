@@ -7,8 +7,6 @@ const templates = new JokeTemplates()
 const selfServiceName = 'm&mJokes'
 let activeService = selfServiceName
 
-const displayLoader = () => document.getElementById('jokes').innerHTML = templates.loader;
-
 const updateContent = async () => {
     document.getElementById('content').innerHTML = await templates.compileContent();
     document.querySelector(`[data-service-name="${activeService}"]`).classList.add('active');
@@ -17,22 +15,6 @@ const updateContent = async () => {
         document.querySelectorAll('.joke-actions').forEach(element => element.classList.add('hidden'));
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 const listenForClicks = (filter, click) => {
     document.addEventListener('click', event => {
@@ -62,8 +44,6 @@ listenForClicks(target => target.matches('.service-button') && !target.matches('
     } else {
         document.querySelector('.add').classList.add('hidden')
     }
-
-    displayLoader()
 
     let jokes
     if (serviceName === selfServiceName) {
@@ -100,8 +80,6 @@ listenForClicks(target => target.matches('#add-submit'), async target => {
         return
     }
 
-    displayLoader()
-
     inputSetup.value = ''
     inputPunchline.value = ''
 
@@ -116,8 +94,6 @@ listenForClicks(target => target.matches('.joke-save'), async target => {
 
     const setup = document.getElementById(`${id}-edit-setup`).value
     const punchline = document.getElementById(`${id}-edit-punchline`).value
-
-    displayLoader()
 
     await service.updateJoke(id, setup, punchline)
     await templates.registerJokesPartial(await service.getJokes())
